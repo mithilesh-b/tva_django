@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap stylesheet link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Upload Study Material</title>
+</head>
+
+
+<body>
+
+    <div class="container">
+    <h1>Admin Panel</h1>
+    {% for course in courses %}
+        <h3>{{ course.name }}</h3>
+        <ul>
+            <li><a href="{% url 'upload_video' course.id %}">Upload Video</a></li>
+            <li><a href="{% url 'upload_material' course.id %}">Upload Study Material</a></li>
+        </ul>
+    {% endfor %}
+    </div>
+
+</body>
+
+</html>

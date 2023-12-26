@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title%}Courses for you | {%endblock title%}
+{% block body %}
+<div class="container mt-5">
+    <h2 class="mb-4">Welcome,{{request.fname}}</h2>
+
+        <a href="/logout">Logout</a>
+
+    {% comment %} <ul class="list-group">
+        {% for course in all_courses %}
+            <li class="list-group-item">
+                <h5 class="mb-0">{{ course.title }}</h5>
+                <p class="mb-2">{{ course.description }}</p>
+            </li>
+        {% endfor %}
+    </ul> {% endcomment %}
+
+</div>
+{% endblock body %}
